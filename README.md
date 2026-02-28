@@ -1,2 +1,2 @@
-Мой первый репозиторий 
-тут доммашняя работа-классная работа
+My first repository
+Here is my homework — classwork
