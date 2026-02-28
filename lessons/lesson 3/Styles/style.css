@@ -1,0 +1,68 @@
+      /* Стили для заголовков */
+        /* селектор {
+        property name }
+
+        
+        */
+
+@import url(https://fonts.googleapis.com/css?family=Tangerine);
+        p{
+            background-color: lightgray;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6{ /* селектор по типу элемента, применяется ко всем элементам данного типа */
+            text-align: center;
+        }
+        h1{ /* одиночный селектор  */
+            background-color: brown;
+            font-family: 'Verdana', 'Geneva', Tahoma, sans-serif;
+            font-size: xx-large;
+        }
+         h2, h3, h4 { /*Групповой селектор */
+            background-color: powderblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: small;
+
+        }
+        *{  /* универсальный селектор, применяет стили ко всем элементам на странице  */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: slategrey;
+        }
+
+        #header-styled{ /* селектор по id, применяется к элементу с id = "header-styled" */
+            background-color: lightcoral;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+        .bg-green{ /* селектор по классу, применяется ко всем элементам с классом bg-green */
+            background-color: lightgreen;
+        }
+        .color-blue{ /* селектор по классу, применяется ко всем элементам с классом color-blue */
+            color: blue;
+        }
+        .font-style { /* селектор по классу, применяется ко всем элементам с классом font-style */
+            /* font-family:'Lucida Sans Regular', 'Trebuchet MS', Helvetica, sans-serif, 'Times New Roman', Times, serif, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+            font-size: 1.2em;
+            font-weight:1000;
+            font-style: italic;
+            font-variant: small-caps;
+            line-height: 1.5; */
+            /* font: italic small-caps bold 1.2em/17px 'Lucida Sans Regular', 'Trebuchet MS', Helvetica, sans-serif, 'Times New Roman', Times, serif, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; */
+            font: italic small-caps bold 250% 'Lucida Sans Regular', 'Trebuchet MS', Helvetica, sans-serif, 'Times New Roman', Times, serif, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+            word-spacing: 5rem; /* расстояние между словами */
+            letter-spacing: 0.5rem; /* расстояние между буквами */
+            text-transform: capitalize; /* преобразует первую букву каждого слова в заглавную */
+            text-indent: 1em; /* отступ первой строки абзаца */
+            text-decoration: underline dotted red 1px; /* текст с красным пунктирным подчеркиванием */
+            text-align: justify; /* выравнивание текста по ширине */
+            color: hsl(120, 100%, 50%); /* цвет текста в формате HSL */
+            /* формат HSL (Hue, Saturation, Lightness) позволяет задавать цвет с помощью трех параметров:
+            оттенок (hue), насыщенность (saturation) и яркость (lightness). 
+            В данном случае, hsl(120, 100%, 50%) соответствует ярко-зеленому цвету. */
+            /*color: rgba(15, 163, 106, 0.7); /* цвет текста */
+            /* white-space: pre; /* сохраняет все пробелы и переносы строк в тексте */
+            /* Font: это укороченая версия которая включает все свойства шрифта 
+            (1.2em/17px 'Lucida Sans Regular') это 2 обязательные части*/
+
+        }

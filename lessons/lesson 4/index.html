@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../shared_resoursers/favicon_io/android-chrome-192x192.png" type="image/png">
+    <title>Занятие 4 Графика в Веб дизайне</title>
+    <style>
+
+        * {
+            margin: 0; /* убираем отступы вокруг элементов */
+            padding: 0; /* убираем внутренние отступы элементов */
+            background-color: bisque; /* задаем цвет фона для всех элементов */
+        }
+
+        .image_container
+        {
+            margin: 5px; /* отступы вокруг контейнера изображения */
+            padding: 3px; /* внутренние отступы внутри контейнера изображения */
+            text-align: center; /* выравнивание по центру */
+            /*border-width: 2px ; /* толщина рамки 
+            border-style: solid; /* стиль рамки 
+            border-color: black; /* цвет рамки */ 
+            border: solid burlywood 3px; /* укороченная запись для задания всех свойств рамки одновременно */
+            border-radius: 5px; /* скругление углов рамки */
+            border-bottom: dashed burlywood 2px; /* задание только нижней рамки с определенным стилем, цветом и толщиной */
+
+        }
+
+        img {
+
+            width: 20%; /* задаем ширину изображения в процентах от его родительского элемента */
+           border-radius: 25px; /* скругление углов изображения */
+            box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.767); /* добавляем тень к изображению */
+           /*float: left; /* позволяет элементу "плавать" влево, позволяя другим элементам обтекать его справа */
+        }   
+
+        img:hover {
+            box-shadow: 17px 17px 15px black; /* изменяем тень при наведении на изображение */
+            width: 22%; /* изменяем ширину изображения при наведении */
+        }
+
+        .background-example {
+            
+          /* background-image: url(../../shared_resoursers/cute.png); /* задаем фоновое изображение для элемента */
+          /* background-repeat: repeat-x; /* повторяем фоновое изображение только по горизонтали */
+          /* background-size: 20%; /* задаем размер фонового изображения в процентах от размера элемента */
+          background-image: linear-gradient(to right, aqua, green, red);
+
+        }                                                           
+
+
+    </style>
+</head>
+<body>
+    <h1> Изображения</h1>
+        <div class="image_container"><img src="resoursers\Color-wheel .png" alt="Color wheel"></div>
+        <p> 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Magni nobis commodi sit illum corporis quisquam earum dicta.
+            Molestiae iusto praesentium, nulla dignissimos aperiam culpa
+            reprehenderit consectetur distinctio? Commodi, reiciendis magni!
+        </p>    
+        <div class="image_container"><img src="resoursers\Color-wheel.png" alt="Color wheel"></div>
+        <div class="image_container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPnTEMwN1nUw4Uu9DN8MhRR4S0QDsyU-RXg&s                                              " alt="Color wheel" ></div>
+        <div class="image_container"><img src="../../shared_resoursers/cute.png" alt="emoji picrture"></div>
+        <!-- width и height - это атрибуты, которые задают ширину и высоту изображения соответственно.
+        Они могут быть указаны в пикселях (px) или в процентах (%).
+        Если указать только один из атрибутов (либо width, либо height), 
+        то другой атрибут будет автоматически рассчитан, чтобы сохранить пропорции изображения. -->
+        <figure>
+            <img src="resoursers\Color-wheel.png" alt="Color wheel">
+            <figcaption>Цветовой круг</figcaption>
+
+        </figure>
+    
+        <div class="background-example">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+        illo optio accusantium deleniti voluptate repellat sequi dicta?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+        illo optio accusantium deleniti voluptate repellat sequi dicta?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+        illo optio accusantium deleniti voluptate repellat sequi dicta?
+           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+        illo optio accusantium deleniti voluptate repellat sequi dicta?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Expedita cumque hic ut officia ex veritatis alias nesciunt voluptas corrupti qui delectus ab,
+        illo optio accusantium deleniti voluptate repellat sequi dicta?
+            
+        </div>
+</body>
+</html>                                                                                 
