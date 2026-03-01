@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../shared_resoursers/favicon_io/android-chrome-192x192.png" type="image/png">
+    <title>Занятие 5</title>
+
+    <style>
+
+        * {
+            margin:0;
+            background-color: blanchedalmond;
+        }
+
+        .img-container {
+            border: 3px cadetblue solid;
+            text-align: center;
+            padding: 10px;
+        }
+
+        img{
+            width: 40%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px rgb(24, 26, 23);
+            transition: all 0.5s ease 0s;
+
+        }
+
+        img:hover {
+           
+            /* transform: rotateZ(120deg); */
+           transform: rotateY(120deg);
+            /* transform: rotateX(120deg); */
+            /* width: 60%;
+            box-shadow: 5px 5px 10px greenyellow; */
+            
+        }
+
+        a:link
+        {
+            color: cornflowerblue;
+
+        }
+        a:visited
+        {
+            color: rgb(33, 105, 19);
+            text-decoration: dotted underline;
+        }
+
+        a:focus
+        {
+            color: crimson
+        }
+
+        a:active
+        {
+            color: slateblue
+        }
+
+        .button:hover
+        {
+            background-color: rgb(72, 4, 160);
+            border-color: darkblue;
+        }
+
+        .button
+        {
+            width: 30%;
+            padding: 10px 0px;
+            margin: auto;
+            text-align: center;
+            border: solid black 1px;
+            border-radius: 10px;
+            background-color: crimson;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function:cubic-bezier(0.25, 0.45, 0.46, 0.94);
+            transition-delay: 0s;
+            /* all это для всех элементов, 0.5s это время анимации,
+             ease это тип анимации 0s это время до начала анимации */
+
+        }
+        .button.a
+
+        {
+            background-color: transparent;
+           
+        }
+        .text
+        {
+            background-color: none;
+        }
+
+        .transform-example
+        {
+          margin: 10px;
+          padding: 10px;
+          height: auto;
+          border: solid cadetblue 5px;
+
+        }
+
+        .square {
+
+            width:50px;
+            height: 50px;
+            margin: 15px auto;
+            background-color: black;
+            transition: all 0.5s ease 0s;
+        }
+        .translate-example:hover
+        {
+            transform: translate(25px, 35px);
+        }
+
+        .scale-example:hover
+        {
+            transform: scale(2, 0.5);
+        }
+
+        .rotate2d{
+
+            transform-origin: 10% 25%;
+        }
+        
+
+        .rotate2d:hover
+        {
+            transform: rotate(270deg);
+        }
+
+        .rotate3dz:hover
+        {
+            transform: rotateZ(120deg);
+        }
+
+        .rotate3dy:hover
+        {
+            transform: rotateY(120deg);
+        }
+
+        .rotate3dx:hover
+        {
+            transform: rotateX(60deg);
+        }
+
+        .skew:hover
+        {
+            transform: skew(30deg, 20deg);
+        }
+
+        .animation{
+            width: 80%;
+            height: 500px;
+            box-sizing: border-box;
+            margin: 5px;
+            text-align: center;
+            border: solid black 5px;
+            padding: 0;
+
+        }
+
+        .circle{
+            height: 50px;
+            width: 50px;
+            background-color: teal;
+            border-radius: 50%;
+            /* margin: 10px auto; */
+            animation: circle-animation;
+            animation-duration: 1.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            /* animation-fill-mode: backwards; */
+            animation-direction: alternate;
+        }
+
+
+            @keyframes circle-animation
+        {
+            0%{
+                transform: translate(0, 0);
+                background-color: wheat;
+            }
+            25%{
+                transform: translate(1000px, 0);
+                background-color: crimson;
+            }
+            50%{
+                transform: translate(1000px, 400px);
+                background-color: yellow;
+            }
+            75%{
+                transform: translate(0px, 400px);
+                background-color: green;
+            }
+            100%{
+                transform: translate(0, 0);
+                background-color: goldenrod;
+            }
+        }
+
+
+
+
+
+
+
+
+        
+
+        /* @keyframes circle-animation
+        {
+            0%{
+                transform: translate(0, 0);
+            }
+            14%{
+                transform: translate(400px, 0);
+            }
+            28%{
+                transform: translate(0px, 400px);
+            }
+            36%{
+                transform: translate(-200px, 400px);
+            }
+            72%{
+                transform: translate(-200px, 0);
+            }
+            100%{
+                transform: translate(0, 0);
+            }
+        } */
+
+    </style>
+</head>
+<body>
+
+    <h1>Animation and Hyperlink</h1>
+
+    <div class="animation">
+
+        <div class="circle" ></div>
+
+    </div>
+
+
+    <div class="transform-example ">
+        <div class="translate-example square"></div>
+        <div class="scale-example square"></div>
+        <div class="rotate2d square"></div>
+        <div class="rotate3dx square"></div>
+        <div class="rotate3dy square"></div>
+        <div class="rotate3dz square"></div>
+        <div class="skew square"></div>
+    </div>
+
+    <div class="button">
+        <a href="">CLICK!!!</a>
+    </div>
+    <p>
+        <a href="http://www.google.com/" target="_blank">Hyperlink</a>
+        это ссылка, которая при нажатии открывает другую страницу.
+        <br>
+        <a href="https://goodsonnikita08-sketch.github.io/Html-code/home_work/Practical.html" target="_blank">My quest</a>
+        сылка на моё практическое задание, которое я сделал для домашнего задания.
+        <br>
+        <a href="https://youtu.be/C0zMWogztQs" target="_blank">Click me</a>
+        <br>
+        <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4" target="_blank">Click me</a>
+
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+         Tenetur neque reiciendis incidunt accusamus perspiciatis amet,
+          quasi repellat dolorum deserunt provident esse odio at odit culpa placeat dolor?
+           Libero, voluptas. Dolor?
+    </p>
+
+    <div class="img-container"><img id="img-id" src="../../shared_resoursers/cute.png" alt="">
+
+    </div>
+    
+</body>
+</html>
