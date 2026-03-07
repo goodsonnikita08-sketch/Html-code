@@ -5,21 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Занятие 6 - Таблицы</title>
     <style>
+        .avatar {
+            width: 20%;
+            border-radius: 50%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            /* border-spacing: 10px; */
+            border-collapse: collapse;
+        }
+
+        td {
+            /* text-align: center; */
+            padding: 10px;
+        }
+
+        td:first-child {
+            text-align: center;
+
+        }   
+
+        .avatar-column 
+        {
+            text-align: center;
+            background-color: cadetblue;
+            /* border: 2px solid black; */
+            width: 30%;
+
+        }
+
+        table{
+            margin: 10px; 
+        }
+
+        .hide-empty{
+            border: 0;
+            empty-cells: hide;
+            border-collapse: separate;
+        }
+
+        caption {
+            border: 1px solid black;
+            border-bottom: 0;
+            background-color: lightblue;
+        }
 
     </style>
 </head>
 <body>
 
-  <Table>
+  <table>
+    <caption>Пользователи</caption>
+    <coolteam>
+        <col class="avatar-column">
+        <col>
+        <col>
+    </coolteam>
+
+    <thead>
+        
+
+
     <tr>
         <th>Аватар</th>
         <th>Имя</th>
         <th>Почта</th>
 
     </tr>
+        </thead>
+    <tbody>
+    <tr>
+        <td><img src="../../shared_resoursers\cute.png" alt="Аватар" class="avatar"></td>
+        <td>Джон доу</td>
+        <td><a href="mailto:djon.dou@gmail.com">djon.dou@gmail.com</a></td>
+    </tr>
+    <tr>
+        <td><img src="../../shared_resoursers\cute.png" alt="Аватар" class="avatar"></td>
+        <td>Джон доу</td>
+        <td><a href="mailto:djon.dou@gmail.com">djon.dou@gmail.com</a></td>
+    </tr>
+    <tr>
+        <td><img src="../../shared_resoursers\cute.png" alt="Аватар" class="avatar"></td>
+        <td>Джон доу</td>
+        <td><a href="mailto:djon.dou@gmail.com">djon.dou@gmail.com</a></td>
+    </tr>
+    </tbody>
 
+    <tfoot>
+        <tr>
+            <td colspan="3">Это таблица</td>
+        </tr>
+    </tfoot>
+</table>
 
-  </Table>
+    <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Dou</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
     
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <td>Jill</td>
+        </tr>
+
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>555-1234</td>
+        </tr>
+
+        <tr>
+            <td>555-5678</td>
+        </tr>
+    </table>
+
+    <table class="hide-empty">
+        <tr>
+            <th>Colum 1</th>
+            <th>Colum 2</th>
+            <th>Colum 3</th>
+        </tr>
+
+        <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem, ipsum dolor sit amet amet consectetur.</td>
+            <td>Lorem, ipsum.</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>Lorem, ipsum dolor sit amet amet consectetur adipisicing.</td>
+            <td></td>
+        </tr>
+    </table>
+
 </body>
 </html>
