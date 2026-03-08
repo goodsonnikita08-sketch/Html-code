@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden hover</title>
+    <style>
+        .page-box{
+            width: 900px;
+            margin: 30px auto;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .menu{
+            position: relative;
+            height: 40px;
+        }
+
+        .menu-item{
+            position: relative;
+            display: inline-block;
+            width: 170px;
+            height: 30px;
+            background-color: #4f9d6b;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            border-right: 1px solid #3d8157;
+        }
+
+        .menu-item:hover{
+            background-color: #8c9951d0;
+        }
+
+        .submenu{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 170px;
+        }
+
+        .menu-item:hover .submenu{
+            display: block;
+        }
+
+        .submenu-item{
+            position: relative;
+            width: 170px;
+            height: 30px;
+            background-color: #2a236dcc;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            border-top: 1px solid #2a236dcc;
+        }
+
+        .submenu-item:hover{
+            background-color: #2d9665cc;
+        }
+
+        .sub-submenu{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 170px;
+            width: 170px;
+        }
+
+        .submenu-item:hover .sub-submenu{
+            display: block;
+        }
+
+        .content{
+            clear: both;
+            padding-top: 35px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-box">
+        <div class="menu">
+            <div class="menu-item">Home</div>
+
+            <div class="menu-item">Categories
+                <div class="submenu">
+                    <div class="submenu-item">Man</div>
+
+                    <div class="submenu-item">Women
+                        <div class="sub-submenu">
+                            <div class="submenu-item">Dress</div>
+                            <div class="submenu-item">Pants</div>
+                            <div class="submenu-item">Shoes</div>
+                        </div>
+                    </div>
+
+                    <div class="submenu-item">Kids</div>
+                </div>
+            </div>
+
+            <div class="menu-item">About</div>
+            <div class="menu-item">Contacts</div>
+        </div>
+
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ac augue quis ante
+            blandit blandit eu et massa. Integer libero dui, pellentesque id laoreet eu,
+            dignissim non ex. Donec a purus non augue rutrum semper et quis justo. Etiam
+            ultrices ante at elit porttitor malesuada. Morbi feugiat turpis massa non
+            venenatis. Suspendisse id leo eros. Fusce sodales elementum purus, eu rutrum
+            arcu blandit eu. Ut convallis, ex et ullamcorper facilisis, arcu risus bibendum
+            ipsum, vel scelerisque eros metus ac odio. Maecenas euismod velit odio, a mattis
+            turpis dictum vel. Maecenas nibh elit, ullamcorper eget tortor a, suscipit mattis
+            mauris. Aliquam nec fringilla lectus, eu luctus quam.
+        </div>
+    </div>
+</body>
+</html>
