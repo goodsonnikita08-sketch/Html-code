@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <link rel="icon" href="../../shared_resoursers/dtek_style_icon_transparent.png">
+    <Style>
+        .float-example{
+            width: 100px;
+            height: 100px;
+            border: solid black 3px;
+            background-color: cadetblue;
+            margin-right:  5px;
+
+            float: left;
+        }
+
+        img{
+            width: 90px;
+            height: 90px;
+            border-radius: 15px;
+            margin: auto;
+        }
+        
+        .article {
+            border: solid black 2px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .float-clear {
+            /* clear: left; */
+            overflow: auto;
+        }
+        .clearfix::before {
+            content: none;
+            clear: both;
+        }
+    </Style>
+</head>
+<body>
+
+    <div class="article float-clear">
+    <div class="float-example">
+        <img src="../../shared_resoursers/thunder.png" alt="">
+    </div>
+    <!-- lorem150 -->
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore exercitationem repellat illum qui a, ipsa sunt illo numquam suscipit quo debitis assumenda accusamus amet porro ipsum ducimus corrupti, cum excepturi officiis quaerat animi aperiam. Quibusdam eligendi blanditiis esse eum ea dolor voluptas cupiditate, quas dicta saepe commodi, nostrum iusto quae consectetur nemo voluptates. Dolorum iusto quis debitis harum error et minima libero. Sunt recusandae porro numquam nulla odit necessitatibus laborum tenetur soluta, ipsum exercitationem quod pariatur quam ullam inventore eveniet possimus dolores assumenda dignissimos repudiandae dolorum natus, ea sint cum quis? Earum nulla neque veniam optio magni voluptate nisi maxime ut. Aliquid optio voluptate eligendi quam aperiam. Fuga fugiat repudiandae cupiditate eligendi omnis optio deleniti? Voluptates quos, porro maiores, ipsum impedit debitis quibusdam unde dolorem error repellat sed deleniti aperiam tempore odio architecto, eos sint numquam facere corporis fugiat. Error libero molestiae accusantium sunt natus, quidem maxime facilis saepe vero!
+    </p>
+    </div>
+    
+    <div class="article float-clear clearfix">
+    <div class="float-example">
+        <img src="../../shared_resoursers/thunder.png" alt="">
+    </div>
+
+        <!-- Lorem200 -->
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis velit ratione odio? Optio corporis veritatis architecto quam enim, quibusdam eligendi minus reprehenderit deleniti alias praesentium eos error beatae dignissimos animi ullam atque ex exercitationem dolor id dolorem, assumenda blanditiis qui quos. Neque reiciendis tempore labore recusandae veritatis, exercitationem, unde, beatae tenetur rem nemo reprehenderit pariatur sapiente. Quas, aspernatur ab! Quisquam nemo dolorem enim minima iure hic dicta aperiam reprehenderit deleniti, illo doloremque harum consequatur fuga voluptate iste praesentium quibusdam error impedit in officia autem quaerat? Odio eaque nesciunt accusamus veniam, quod repellat omnis molestiae, nobis sapiente perspiciatis voluptatum magni neque itaque dolor possimus vero reiciendis! Autem in doloribus, labore eveniet consequatur ex magnam ut aspernatur error vel cum, deserunt, excepturi voluptates commodi exercitationem numquam dolore nam inventore non eaque fuga. Saepe veniam temporibus delectus iure, voluptatibus ex dolores numquam magni consequuntur sunt blanditiis atque ut, sint quis inventore nostrum voluptates praesentium accusamus ab repudiandae? Earum fugit itaque exercitationem aliquam quasi nam at blanditiis aliquid voluptatem a, quam, molestias impedit sint voluptatibus illo minus tempora doloribus! Magnam architecto eligendi, voluptatem accusamus adipisci, ad cupiditate earum pariatur neque quam nobis. Accusamus eum deserunt ex voluptatum. Ullam, assumenda. Quos, error sunt! Temporibus, officiis!
+        </p>
+    </div>
+</body>
+</html>
