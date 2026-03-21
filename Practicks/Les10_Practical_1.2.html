@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Quest №2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu {
+            width: 150px;
+            background: #777;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu a {
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 1px solid #555;
+        }
+
+        .menu a:hover {
+            background: #444;
+        }
+
+
+        .menu a[href="#c1"]:target,
+        .menu a[href="#c2"]:target,
+        .menu a[href="#c3"]:target {
+            background: #333;
+        }
+
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .tab {
+            display: none;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab:target {
+            display: flex;
+        }
+
+
+
+        .box {
+            background: #555;
+            color: white;
+            padding: 10px;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <a href="#c1">Tab 1</a>
+        <a href="#c2">Tab 2</a>
+        <a href="#c3">Tab 3</a>
+    </div>
+
+    <div class="content">
+        <div id="c1" class="tab">
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 1</h3>
+                <p> Почему скелеты не пьют воду?
+                    Потому-что вода это жидКость!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 2</h3>
+                <p>Как называется костюм скелета? 
+                   КОСТЬюм!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 3</h3>
+                <p>Что может совершить злой скелет? 
+                   паКОСТЬ!</p>
+            </div>
+        </div>
+
+        <div id="c2" class="tab">
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 2.1</h3>
+                <p>Почему скелеты могут открыть любую дверь? 
+                   У них же есть КЛЮЧица!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 2.2</h3>
+                <p>Что говорит скелет во время приветствия? BONEжур!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 2.3</h3>
+                <p>что скелет ценит в новом телевизоре? ЧетКОСТЬ!</p>
+            </div>
+        </div>
+
+        <div id="c3" class="tab">
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 3.1</h3>
+                <p>Почему скелет хочет дружить? 
+                   Он чувствует одиноКОСТЬ!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 3.2</h3>
+                <p>Из чего стреляет скелет?
+                   Из ЧЕРЕПпушки!</p>
+            </div>
+            <div class="box"><img src="../shared_resoursers/sans.png">
+                <h3>Pun 3.3</h3>
+                <p>Зачем скелет сидит на диете? 
+                   Чтобы почувствовать лёгКОСТЬ!</p>
+                   <p>P.S ох, боже.. ну и чем я занимаюсь в час ночи? вместо сна, придумываю редКОСТные каламбуры!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
