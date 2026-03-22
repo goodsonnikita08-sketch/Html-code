@@ -65,3 +65,47 @@ main section {
     align-items: center;
     justify-content: center;
 }
+
+footer {
+    background-color: darkgrey;
+    flex-basis: 5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Розмер экрану от 570px до 960px */
+@media screen and (min-width:570) and (max-width:960) {
+
+    aside:last-child {
+        display: none;
+    }
+
+    aside:first-child {
+        flex-basis: 30%;
+    }
+    section {
+        flex-basis: 70%;
+    }
+
+}
+/* Экраны что меншь 570px */
+@media screen and (max-width:570px) {
+    main {
+        flex-direction: column-reverse;
+    }
+
+    aside:last-child {
+        display: none;
+    }
+
+    aside:first-child {
+        flex-basis: 20vh;
+    }
+
+    section {
+        flex-basis: auto;
+    }
+}
