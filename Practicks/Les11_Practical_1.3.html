@@ -17,15 +17,12 @@
             display: flex;
             min-height: 100vh;
         }
-
-        /* Sidebar */
+        
         .sidebar {
             width: 240px;
             background: #4d1f00;
-            /* тёмно‑тёмно‑оранжевый фон панели */
             color: #fff;
             padding: 30px 0;
-            /* убрали боковые отступы */
         }
 
         .logo {
@@ -39,26 +36,18 @@
 
         .menu {
             width: 100%;
-            /* меню занимает всю ширину */
         }
 
         .menu div {
             width: 100%;
-            /* кнопки растянуты на всю ширину */
             padding: 15px 0;
-            /* только вертикальные отступы */
             background: #4d1f00;
-            /* тот же фон, что у панели */
             border-top: 2px solid #cc5200;
-            /* тёмно‑оранжевый бордер сверху */
             border-bottom: 2px solid #cc5200;
-            /* тёмно‑оранжевый бордер снизу */
             text-align: center;
             font-size: 16px;
             font-weight: bold;
         }
-
-        /* Main content */
         .main {
             flex: 1;
             padding: 20px;
@@ -102,7 +91,6 @@
             border: 2px solid #ff6600;
         }
 
-        /* Recent Activity Table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -127,7 +115,6 @@
             background: #333;
         }
 
-        /* Адаптивность */
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
@@ -161,7 +148,6 @@
 
 <body>
     <div class="container">
-        <!-- Sidebar -->
         <div class="sidebar">
             <div class="logo">
                 <img src="../shared_resoursers/logo.png" alt="Logo">
@@ -175,7 +161,6 @@
             </div>
         </div>
 
-        <!-- Main content -->
         <div class="main">
             <h2>Dashboard - April 10, 2026</h2>
 
