@@ -77,7 +77,7 @@ footer {
 
 
 /* Розмер экрану от 570px до 960px */
-@media screen and (min-width:570) and (max-width:960) {
+@media screen and (min-width:570px) and (max-width:960px) {
 
     aside:last-child {
         display: none;
