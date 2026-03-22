@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deltarune News Broadcast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: auto;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .article {
+            flex: 2;
+        }
+
+        .article h2 {
+            color: #ffcc00;
+            text-transform: uppercase;
+        }
+
+        .article p {
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        .tenna {
+            color: #ffcc00;
+        }
+
+        .mettaton {
+            color: #ff4da6;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        .section-title {
+            background: linear-gradient(90deg, #ff4da6, #b366ff);
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            border-radius: 8px 8px 0 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .section-item {
+            background: #ffe6f7;
+            color: #660066;
+            padding: 10px;
+            border-bottom: 2px solid #ff4da6;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) and (min-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                display: flex;
+                gap: 20px;
+            }
+
+            .sidebar-column {
+                flex: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="article">
+            <h2>BREAKING NEWS: INTRODUCTION!</h2>
+            <p><strong class="tenna">Mr. (Ant)TENNA!:</strong> ATTENTION, VIEWERS! The Dark World trembles once again!
+                Portals open, shadows rise, and heroes march forward!
+                THIS JUST IN: Cyber City’s neon lights flicker with secrets, and Card Kingdom whispers of hidden power.
+                Stay tuned, because destiny itself is making headlines tonight!</p>
+
+            <h2>HOT UPDATE: ADDITIONAL INFORMATION!</h2>
+            <p><strong class="tenna">Mr. (Ant)TENNA!:</strong> ALERT! Rumors swirl of new allies and dangerous foes.
+                Machines hum in the dark, castles rise from the void,
+                and every choice echoes louder than thunder. BREAKING BULLETIN: The balance between Lightners and
+                Darkners is shifting — and the story is far from over!</p>
+
+            <p><strong class="mettaton">Mettaton:</strong> Fabulous! Darling, the drama is irresistible! Talking
+                animals, mechanical stars, and kingdoms in peril —
+                this is the kind of story that deserves a spotlight, and I intend to shine brighter than anyone else!
+            </p>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-column">
+                <h3 class="section-title">Actions</h3>
+                <div class="section-item"><strong class="tenna">Mr. (Ant)TENNA!:</strong> LIVE REPORT: Heroes confront
+                    the King of Spades</div>
+                <div class="section-item"><strong class="mettaton">Mettaton:</strong> FLASH BULLETIN: Cyber City’s neon
+                    lights shimmer</div>
+                <div class="section-item"><strong class="tenna">Mr. (Ant)TENNA!:</strong> HEADLINE ALERT: Strange
+                    broadcasts echo across the Dark World</div>
+            </div>
+            <div class="sidebar-column">
+                <h3 class="section-title">Plans</h3>
+                <div class="section-item"><strong class="mettaton">Mettaton:</strong> BREAKING: Rumors of a new chapter
+                    unfolding</div>
+                <div class="section-item"><strong class="tenna">Mr. (Ant)TENNA!:</strong> NEWSWIRE: Darkners prepare for
+                    the next great clash</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
