@@ -1,11 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("../shared_resoursers/contact_background.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .contact-form-container {
+            width: 820px;
+            margin: 45px auto;
+            padding: 30px 28px 35px 28px;
+            border: 3px solid rgba(0, 0, 0, 0.35);
+            background-color: rgba(35, 58, 61, 0.35);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-form-title {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .contact-form-text {
+            color: white;
+            font-size: 12px;
+            margin-bottom: 28px;
+        }
+
+        .contact-form-row {
+            margin-bottom: 12px;
+            font-size: 0;
+        }
+
+        .contact-form-label {
+            display: inline-block;
+            width: 140px;
+            color: white;
+            font-size: 14px;
+            vertical-align: top;
+            padding-top: 8px;
+        }
+
+        .contact-form-input {
+            height: 34px;
+            border: none;
+            padding-left: 12px;
+            font-size: 13px;
+            color: gray;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .input-name {
+            width: 206px;
+            margin-right: 14px;
+        }
+
+        .input-last-name {
+            width: 206px;
+        }
+
+        .input-email {
+            width: 426px;
+        }
+
+        .input-phone {
+            width: 120px;
+            margin-right: 13px;
+        }
+
+        .input-phone-last {
+            width: 160px;
+        }
+
+        .contact-form-select {
+            width: 426px;
+            height: 34px;
+            border: none;
+            padding-left: 12px;
+            font-size: 13px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-form-textarea {
+            width: 426px;
+            height: 96px;
+            border: none;
+            padding: 10px 12px;
+            font-size: 13px;
+            resize: none;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-form-line {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.7);
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .submit-btn-container {
+            text-align: right;
+        }
+
+        .submit-btn {
+            width: 426px;
+            height: 34px;
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="contact-form-container">
+        <h1 class="contact-form-title">Contact form</h1>
+        <p class="contact-form-text">Please fill in your information and we'll be sending your order.</p>
+
+        <form action="/message" method="post">
+            <div class="contact-form-row">
+                <label class="contact-form-label" for="first-name">Your name</label>
+                <input class="contact-form-input input-name" type="text" id="first-name" name="first-name"
+                    placeholder="first name">
+                <input class="contact-form-input input-last-name" type="text" id="last-name" name="last-name"
+                    placeholder="last name">
+            </div>
+
+            <div class="contact-form-row">
+                <label class="contact-form-label" for="email">Your email</label>
+                <input class="contact-form-input input-email" type="email" id="email" name="email"
+                    placeholder="your_mail@mail.com">
+            </div>
+
+            <div class="contact-form-row">
+                <label class="contact-form-label" for="phone-1">Phone *</label>
+                <input class="contact-form-input input-phone" type="text" id="phone-1" name="phone-1" placeholder="000">
+                <input class="contact-form-input input-phone" type="text" id="phone-2" name="phone-2" placeholder="000">
+                <input class="contact-form-input input-phone-last" type="text" id="phone-3" name="phone-3"
+                    placeholder="0000">
+            </div>
+
+            <div class="contact-form-row">
+                <label class="contact-form-label" for="subject">Message subject *</label>
+                <select class="contact-form-select" id="subject" name="subject">
+                    <option>Other</option>
+                    <option>Question</option>
+                    <option>Order</option>
+                    <option>Support</option>
+                </select>
+            </div>
+
+            <div class="contact-form-row">
+                <label class="contact-form-label" for="message">Message *</label>
+                <textarea class="contact-form-textarea" id="message" name="message"></textarea>
+            </div>
+
+            <hr class="contact-form-line">
+
+            <div class="submit-btn-container">
+                <button class="submit-btn" type="submit">SUBMIT FORM</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
