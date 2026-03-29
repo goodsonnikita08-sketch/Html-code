@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights - Search List</title>
+    <link rel="icon" href="../shared_resoursers/icons_practice/Account.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #efefef;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #0f4778;
+            color: white;
+        }
+
+        .header-container {
+            width: 1120px;
+            margin: 0 auto;
+            padding: 22px 0;
+        }
+
+        .header-title {
+            display: inline-block;
+            font-size: 17px;
+        }
+
+        .header-path {
+            float: right;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        .main-container {
+            width: 1120px;
+            margin: 20px auto;
+        }
+
+        .search-form {
+            margin-bottom: 18px;
+        }
+
+        .trip-type-row {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #444444;
+        }
+
+        .trip-type-label {
+            margin-right: 12px;
+        }
+
+        .search-row {
+            font-size: 0;
+        }
+
+        .search-input {
+            width: 160px;
+            height: 34px;
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+            padding-left: 12px;
+            margin-right: 8px;
+            font-size: 12px;
+            color: #888888;
+            background-color: white;
+        }
+
+        .search-select {
+            width: 150px;
+            height: 34px;
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+            padding-left: 10px;
+            margin-right: 8px;
+            font-size: 12px;
+            color: #444444;
+            background-color: white;
+        }
+
+        .search-btn {
+            width: 110px;
+            height: 34px;
+            border: none;
+            border-radius: 3px;
+            background-color: #0f4778;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .content {
+            font-size: 0;
+        }
+
+        .filters-block {
+            width: 285px;
+            display: inline-block;
+            vertical-align: top;
+            background-color: white;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+            padding: 18px 18px 16px 18px;
+            margin-right: 18px;
+        }
+
+        .flights-block {
+            width: 817px;
+            display: inline-block;
+            vertical-align: top;
+            background-color: white;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+        }
+
+        .filter-title {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 22px;
+            color: black;
+        }
+
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-group-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f4778;
+            margin-bottom: 10px;
+        }
+
+        .filter-option {
+            display: block;
+            font-size: 13px;
+            color: #444444;
+            margin-bottom: 4px;
+        }
+
+        .price-text {
+            font-size: 13px;
+            color: #444444;
+            margin-right: 8px;
+        }
+
+        .price-input {
+            width: 70px;
+            height: 28px;
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+            padding-left: 7px;
+            font-size: 12px;
+            color: #888888;
+            margin-right: 4px;
+        }
+
+        .flights-title {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 22px 0;
+            border-bottom: 1px solid #dddddd;
+            color: black;
+        }
+
+        .flights-head {
+            background-color: #f3f3f3;
+            border-bottom: 1px solid #dddddd;
+            font-size: 0;
+            padding: 10px 18px;
+        }
+
+        .flight-head-item {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 12px;
+            font-weight: 700;
+            color: #0f4778;
+        }
+
+        .airline-col {
+            width: 145px;
+        }
+
+        .departure-col {
+            width: 105px;
+        }
+
+        .duration-col {
+            width: 105px;
+        }
+
+        .arrival-col {
+            width: 105px;
+        }
+
+        .price-col {
+            width: 70px;
+        }
+
+        .action-col {
+            width: 110px;
+            text-align: center;
+        }
+
+        .flight-row {
+            font-size: 0;
+            padding: 12px 18px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .flight-item {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 12px;
+            color: #444444;
+        }
+
+        .flight-main-text {
+            font-size: 15px;
+            color: #333333;
+            margin-bottom: 5px;
+        }
+
+        .flight-sub-text {
+            font-size: 11px;
+            color: #8c8c8c;
+        }
+
+        .book-btn {
+            width: 70px;
+            height: 28px;
+            border: none;
+            border-radius: 3px;
+            background-color: #0f4778;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            margin-bottom: 7px;
+        }
+
+        .flight-details {
+            display: block;
+            text-decoration: none;
+            font-size: 11px;
+            color: #0f4778;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <h1 class="header-title">Flights - Search List</h1>
+            <p class="header-path">Home / Flights Search List</p>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <form class="search-form" action="/search" method="get">
+            <div class="trip-type-row">
+                <label class="trip-type-label">
+                    <input type="radio" name="trip-type" checked>
+                    One Way
+                </label>
+
+                <label class="trip-type-label">
+                    <input type="radio" name="trip-type">
+                    Round Trip
+                </label>
+            </div>
+
+            <div class="search-row">
+                <input class="search-input" type="text" name="from" placeholder="From">
+                <input class="search-input" type="text" name="to" placeholder="To">
+                <input class="search-input" type="text" name="depart-date" placeholder="Depart Date">
+                <input class="search-input" type="text" name="return-date" placeholder="Return Date">
+
+                <select class="search-select" name="class">
+                    <option>Econom Class</option>
+                    <option>Business Class</option>
+                    <option>First Class</option>
+                </select>
+
+                <button class="search-btn" type="submit">Search</button>
+            </div>
+        </form>
+
+        <div class="content">
+            <div class="filters-block">
+                <h2 class="filter-title">Filter</h2>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">No. of Stops</h3>
+
+                    <label class="filter-option">
+                        <input type="checkbox" name="stop-1">
+                        Non Stop
+                    </label>
+
+                    <label class="filter-option">
+                        <input type="checkbox" name="stop-2">
+                        1 Stop
+                    </label>
+
+                    <label class="filter-option">
+                        <input type="checkbox" name="stop-3">
+                        2+ Stops
+                    </label>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Price</h3>
+
+                    <span class="price-text">Min:</span>
+                    <input class="price-input" type="text" placeholder="0">
+
+                    <span class="price-text">Max:</span>
+                    <input class="price-input" type="text" placeholder="1000">
+                    <span class="price-text">$</span>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Airlines</h3>
+
+                    <label class="filter-option"><input type="checkbox"> Asiana Airlines</label>
+                    <label class="filter-option"><input type="checkbox"> American Airlines</label>
+                    <label class="filter-option"><input type="checkbox"> Air Canada</label>
+                    <label class="filter-option"><input type="checkbox"> Air India</label>
+                    <label class="filter-option"><input type="checkbox"> Jet Airways</label>
+                    <label class="filter-option"><input type="checkbox"> Spicejet</label>
+                    <label class="filter-option"><input type="checkbox"> IndiGo</label>
+                    <label class="filter-option"><input type="checkbox"> Multiple Airlines</label>
+                </div>
+            </div>
+
+            <div class="flights-block">
+                <h2 class="flights-title">Delhi to Sydney</h2>
+
+                <div class="flights-head">
+                    <div class="flight-head-item airline-col">Airlines</div>
+                    <div class="flight-head-item departure-col">Departure</div>
+                    <div class="flight-head-item duration-col">Duration</div>
+                    <div class="flight-head-item arrival-col">Arrival</div>
+                    <div class="flight-head-item price-col">Price</div>
+                    <div class="flight-head-item action-col"></div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+
+                <div class="flight-row">
+                    <div class="flight-item airline-col">
+                        <p class="flight-main-text">IndiGo</p>
+                        <p class="flight-sub-text">6E-2489</p>
+                    </div>
+
+                    <div class="flight-item departure-col">
+                        <p class="flight-main-text">23:30</p>
+                        <p class="flight-sub-text">Delhi</p>
+                    </div>
+
+                    <div class="flight-item duration-col">
+                        <p class="flight-main-text">18h 55m</p>
+                        <p class="flight-sub-text">Non Stop</p>
+                    </div>
+
+                    <div class="flight-item arrival-col">
+                        <p class="flight-main-text">18:15</p>
+                        <p class="flight-sub-text">Sydney</p>
+                    </div>
+
+                    <div class="flight-item price-col">
+                        <p class="flight-main-text">$980</p>
+                    </div>
+
+                    <div class="flight-item action-col">
+                        <button class="book-btn" type="button">Book</button>
+                        <a class="flight-details" href="#">Flight Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
