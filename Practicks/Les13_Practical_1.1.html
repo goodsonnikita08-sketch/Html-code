@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Login</title>
+    <link rel="icon" href="../../shared_resoursers/icons_practice/account.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #df5a3d;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login-form-container {
+            width: 370px;
+            margin: 70px auto;
+            text-align: center;
+        }
+
+        .login-form {
+            background-color: #e8e3e3;
+            padding: 45px 20px 20px 20px;
+            position: relative;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .account-icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid #4d5b66;
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .account-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .login-form-title {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: black;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 16px 10px;
+            margin-bottom: 15px;
+            border: none;
+            background-color: #f5f5f5;
+            text-align: center;
+            font-size: 18px;
+            color: gray;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px 10px;
+            border: none;
+            background-color: #39a95a;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 18px;
+        }
+
+        .forgot-password-link {
+            text-decoration: none;
+            color: #df5a3d;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .social-login-text {
+            margin: 30px 0 20px 0;
+            color: white;
+            font-size: 24px;
+        }
+
+        .social-buttons-container {
+            font-size: 0;
+        }
+
+        .social-login-link {
+            display: inline-block;
+            width: 170px;
+            padding: 14px 0;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin: 0 8px;
+        }
+
+        .facebook-btn {
+            background-color: #2f5dab;
+        }
+
+        .twitter-btn {
+            background-color: #2da9e9;
+        }
+
+        .social-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .social-text {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-form-container">
+        <form class="login-form" action="/login" method="post">
+            <div class="account-icon-container">
+                <img class="account-icon" src="../../shared_resoursers/icons_practice/account.png" alt="account icon">
+            </div>
+
+            <h1 class="login-form-title">Member Login</h1>
+
+            <input class="login-input" type="text" name="username" placeholder="Username">
+            <input class="login-input" type="password" name="password" placeholder="Password">
+
+            <button class="login-btn" type="submit">Login</button>
+
+            <a class="forgot-password-link" href="#">Forgot password?</a>
+        </form>
+
+        <p class="social-login-text">... or login with:</p>
+
+        <div class="social-buttons-container">
+            <a class="social-login-link facebook-btn" href="#">
+                <img class="social-icon" src="../../shared_resoursers/icons_practice/facebook.svg" alt="facebook icon">
+                <span class="social-text">Facebook</span>
+            </a>
+
+            <a class="social-login-link twitter-btn" href="#">
+                <img class="social-icon" src="../../shared_resoursers/icons_practice/twitter.svg" alt="twitter icon">
+                <span class="social-text">Twitter</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
