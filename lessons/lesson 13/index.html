@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="icon" href="../../shared_resoursers/sans.png">
+
+    <Style>
+        * {
+            background-color: darkslategray;
+        }
+        
+        form {
+            border: 2px solid black;
+            padding: 1.3em;
+        }
+        
+        /* input {
+            
+        } */
+
+    </Style>
+</head>
+<body>
+    <form action="/register" method="post">
+        <h2>Регистрация</h2>
+        <label for="username">Имя пользователя</label>
+        <input type="text" name="username" id="username">
+        <br>
+        <label for="email">Електронная почта</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password">Пароль</label>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="about">О себе</label>
+        <br>
+        <textarea name="about" id="about"></textarea>
+        <br>
+        <label for="agree"> Согласен на условия</label>
+        <input type="checkbox" name="agree" id="agree">
+        <br>
+
+        <fieldset>
+        <p>Gender</p>
+            <input type="radio" name="gender" id="genderM" value="male">
+            <label for="genderM">Мужской</label>
+            <input type="radio" name="gender" id="genderF" value="female">
+            <label for="genderF">Женский</label>
+            <input type="radio" name="gender" id="genderO" value="Other">
+            <label for="genderO">Они</label>
+        </fieldset>
+
+        <label for="fav-pizza">Любимая пицца</label>
+        <select name="fav-pizza" id="fav-pizza">
+            <option value="peproni">Пепперони</option>
+            <option value="margarita">Маргарита</option>
+            <option value="4-cheese">4 сыра</option>
+        </select>
+        <br>
+
+        <label for="fav-genre">Любимый жанр</label>
+        <input type="text" name="fav-genre" id="fav-genre" list="genres">
+        <datalist id="genres">
+            <option value="horor">Хоррор</option>
+            <option value="action">Экшен</option>
+            <option value="comedy">Комедия</option>
+            <option value="drama">Драма</option>
+        </datalist>
+        <br>
+
+        <label for="birthday">Дата рождения</label>
+        <input type="date" name="birthday" id="birthday">
+
+        <br>
+        <label for="link">Социальная сеть</label>
+        <input type="url" name="link" id="link">
+
+        <br>
+        <label for="Tail">Рост</label>
+        <input type="number" name="Tail" id="Tail" min="50" max="250">
+
+        <br>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+
+
+
+    <form action="/search" method="get">
+
+        <h2>Поиск</h2>
+        <input type="text" name="query">
+        <input type="submit" value="Найти" name="" id="">
+        <input type="reset" value="Очистить">
+    </form>
+    
+</body>
+</html>
