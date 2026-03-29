@@ -1,138 +1,146 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member Login</title>
-    <link rel="icon" href="../../shared_resoursers/icons_practice/account.png">
+    <link rel="icon" href="../shared_resoursers/icons_practice/Account.png">
     <style>
-        * {
+        *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        body {
+        body{
             background-color: #df5a3d;
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .login-form-container {
-            width: 370px;
-            margin: 70px auto;
+        .login-form-container{
+            width: 380px;
+            margin: 62px auto 0 auto;
             text-align: center;
         }
 
-        .login-form {
-            background-color: #e8e3e3;
-            padding: 45px 20px 20px 20px;
+        .login-form{
+            width: 100%;
+            background-color: #ddd8d8;
+            padding: 58px 34px 22px 34px;
             position: relative;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
         }
 
-        .account-icon-container {
-            width: 70px;
-            height: 70px;
+        .account-icon-container{
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             background-color: white;
-            border: 3px solid #4d5b66;
+            border: 3px solid #4e5a65;
             position: absolute;
-            top: -35px;
+            top: -28px;
             left: 50%;
             transform: translateX(-50%);
             overflow: hidden;
         }
 
-        .account-icon {
+        .account-icon{
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            display: block;
         }
 
-        .login-form-title {
-            font-size: 38px;
+        .login-form-title{
+            font-size: 20px;
             font-weight: 700;
-            margin-bottom: 25px;
             color: black;
+            margin-bottom: 22px;
         }
 
-        .login-input {
+        .login-input{
             width: 100%;
-            padding: 16px 10px;
-            margin-bottom: 15px;
+            height: 30px;
+            display: block;
             border: none;
-            background-color: #f5f5f5;
+            background-color: #f1efef;
+            margin-bottom: 12px;
             text-align: center;
-            font-size: 18px;
-            color: gray;
+            font-size: 12px;
+            color: #7b7b7b;
         }
 
-        .login-btn {
+        .login-btn{
             width: 100%;
-            padding: 14px 10px;
+            height: 32px;
+            display: block;
             border: none;
-            background-color: #39a95a;
+            background-color: #39a85b;
             color: white;
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 700;
             cursor: pointer;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
 
-        .forgot-password-link {
+        .forgot-password-link{
+            display: block;
             text-decoration: none;
             color: #df5a3d;
-            font-size: 16px;
+            font-size: 11px;
             font-weight: 700;
         }
 
-        .social-login-text {
-            margin: 30px 0 20px 0;
+        .social-login-text{
             color: white;
-            font-size: 24px;
+            font-size: 15px;
+            margin-top: 18px;
+            margin-bottom: 14px;
         }
 
-        .social-buttons-container {
+        .social-buttons-container{
+            width: 100%;
+            text-align: center;
             font-size: 0;
         }
 
-        .social-login-link {
+        .social-login-link{
+            width: 120px;
+            height: 34px;
+            line-height: 34px;
             display: inline-block;
-            width: 170px;
-            padding: 14px 0;
             text-decoration: none;
             color: white;
-            font-size: 20px;
-            margin: 0 8px;
+            font-size: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            vertical-align: top;
         }
 
-        .facebook-btn {
-            background-color: #2f5dab;
+        .facebook-btn{
+            background-color: #3c5b9b;
+            margin-right: 12px;
         }
 
-        .twitter-btn {
-            background-color: #2da9e9;
+        .twitter-btn{
+            background-color: #55acee;
         }
 
-        .social-icon {
-            width: 16px;
-            height: 16px;
-            margin-right: 10px;
+        .social-icon{
+            width: 10px;
+            height: 10px;
             vertical-align: middle;
+            margin-right: 8px;
         }
 
-        .social-text {
+        .social-text{
             vertical-align: middle;
         }
     </style>
 </head>
-
 <body>
     <div class="login-form-container">
         <form class="login-form" action="/login" method="post">
             <div class="account-icon-container">
-                <img class="account-icon" src="../../shared_resoursers/icons_practice/account.png" alt="account icon">
+                <img class="account-icon" src="../shared_resoursers/icons_practice/Account.png" alt="account icon">
             </div>
 
             <h1 class="login-form-title">Member Login</h1>
@@ -149,16 +157,15 @@
 
         <div class="social-buttons-container">
             <a class="social-login-link facebook-btn" href="#">
-                <img class="social-icon" src="../../shared_resoursers/icons_practice/facebook.svg" alt="facebook icon">
+                <img class="social-icon" src="../shared_resoursers/icons_practice/Facebok logo.png" alt="facebook icon">
                 <span class="social-text">Facebook</span>
             </a>
 
             <a class="social-login-link twitter-btn" href="#">
-                <img class="social-icon" src="../../shared_resoursers/icons_practice/twitter.svg" alt="twitter icon">
+                <img class="social-icon" src="../shared_resoursers/icons_practice/Twitter logo.png" alt="twitter icon">
                 <span class="social-text">Twitter</span>
             </a>
         </div>
     </div>
 </body>
-
 </html>
