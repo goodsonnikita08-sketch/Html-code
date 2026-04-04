@@ -8,6 +8,7 @@ body {
   background-color: #007acc;
   font-family: Helvetica, sans-serif;
   font-size: 1.6em;
+  font-weight: bold;
 }
 
 .container {
@@ -15,7 +16,10 @@ body {
   width: 80vw;
   margin: auto;
   text-align: center;
-  border: solid 2px black;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
 }
 
 nav {

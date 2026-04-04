@@ -8,10 +8,15 @@ $min-width: 560px;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: $color;
-    font-family: $font;
-    font-size: $font-size;
+    font: {
+        family: $font;
+        size: $font-size;
+        weight:bold;
+    }
+    
 } 
 
 .container {
@@ -19,7 +24,12 @@ body {
     width: 80vw;
     margin: auto;
     text-align: center;
-    border: solid 2px black;
+    border: {
+        style:solid;
+        color: black;
+        width: 2px;
+        radius:10px;
+    }
 }
 
 nav {
