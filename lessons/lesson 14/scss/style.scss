@@ -62,4 +62,17 @@ nav {
     @include bordered(red, 3px);
     @include important-text();
     background-color: darken($color, $amount: 10%);
+
+}
+
+p {
+    background-color: mix(#6200fffd, #00ff55, #00f7ff, 50%);
+}
+
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
 }
