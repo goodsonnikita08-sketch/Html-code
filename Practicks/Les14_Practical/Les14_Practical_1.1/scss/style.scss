@@ -1,0 +1,38 @@
+$main-color: #0f7ac0;
+$text-color: white;
+$bg-color: #dddddd;
+
+$footer-color: darken($main-color, 10%);
+
+body{
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 130px 1fr 85px;
+    min-height: 100vh;
+}
+
+.header{
+    background-color: $main-color;
+    color: $text-color;
+    text-align: center;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.content{
+    background-color: $bg-color;
+    color: black;
+    font-size: 28px;
+    padding: 5px;
+}
+
+.footer{
+    background-color: $footer-color;
+    color: $text-color;
+    text-align: center;
+    font-size: 28px;
+    padding-top: 10px;
+}

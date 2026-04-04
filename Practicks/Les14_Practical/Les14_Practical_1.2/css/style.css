@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.menu {
+  background-color: #333;
+}
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu li {
+  position: relative;
+}
+.menu a {
+  display: block;
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #aaaaaa;
+}
+.menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  flex-direction: column;
+  min-width: 150px;
+}
+.menu li:hover .sub-menu {
+  display: flex;
+}
+.menu .sub-menu li a {
+  padding: 10px 15px;
+}/*# sourceMappingURL=style.css.map */
