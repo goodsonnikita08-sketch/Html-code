@@ -1,3 +1,13 @@
 body {
   background-color: #007acc;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6em;
+}
+
+.container {
+  min-width: 560px;
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  border: solid 2px black;
 }/*# sourceMappingURL=style.css.map */

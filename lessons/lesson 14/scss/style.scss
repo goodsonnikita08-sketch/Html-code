@@ -1,4 +1,17 @@
 $color:#007acc;
+$font: Helvetica, sans-serif;
+$font-size: 1.6em;
+$min-width: 560px;
 body {
     background-color: $color;
+    font-family: $font;
+    font-size: $font-size;
 } 
+
+.container {
+    min-width: $min-width;
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    border: solid 2px black;
+}
