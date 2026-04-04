@@ -1,5 +1,6 @@
-@import '_variables';
-@import '_reset';
+@import "_variables";
+@import "_reset";
+@import "_mixin";
 
 * {
     margin: 0;
@@ -18,6 +19,7 @@ body {
 } 
 
 .container {
+    @include important-text();
     min-width: $min-width;
     width: 80vw;
     margin: auto;
@@ -55,16 +57,8 @@ nav {
     
 }
 
-@mixin important-text {
-    color: red;
-    font : {
-        size: 1.2em;
-        weight: bold;
-    }
-    text-transform: uppercase;
-}
-
 .danger {
-    @include important-text;
+    @include bordered(red, 3px);
+    @include important-text();
     background-color: darken($color, $amount: 10%);
 }
