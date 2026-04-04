@@ -24,12 +24,13 @@ body {
     width: 80vw;
     margin: auto;
     text-align: center;
-    border: {
-        style:solid;
-        color: black;
-        width: 2px;
-        radius:10px;
-    }
+    @include bordered();
+    // border: {
+    //     style:solid;
+    //     color: black;
+    //     width: 2px;
+    //     radius:10px;
+    // }
 }
 
 nav {

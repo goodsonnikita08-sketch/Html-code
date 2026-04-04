@@ -26,10 +26,7 @@ body {
   width: 80vw;
   margin: auto;
   text-align: center;
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  border-radius: 10px;
+  border: 1px solid black;
 }
 
 nav {
