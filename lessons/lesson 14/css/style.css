@@ -60,5 +60,22 @@ nav a:hover {
 }
 
 p {
-  background-color: rgba(126.5, 185.5490196078, 42.8333333333, 0.9960784314);
+  background-color: rgba(5.0960784314, 220.6568627451, 67.7176470588, 0.7215686275);
+}
+
+.button-basic, .button-submit, .button-record {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.button-record {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
