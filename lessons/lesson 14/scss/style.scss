@@ -1,7 +1,5 @@
-$color:#007acc;
-$font: Helvetica, sans-serif;
-$font-size: 1.6em;
-$min-width: 560px;
+@import '_variables';
+@import '_reset';
 
 * {
     margin: 0;
