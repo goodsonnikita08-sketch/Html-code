@@ -54,3 +54,17 @@ nav {
     }
     
 }
+
+@mixin important-text {
+    color: red;
+    font : {
+        size: 1.2em;
+        weight: bold;
+    }
+    text-transform: uppercase;
+}
+
+.danger {
+    @include important-text;
+    background-color: darken($color, $amount: 10%);
+}
