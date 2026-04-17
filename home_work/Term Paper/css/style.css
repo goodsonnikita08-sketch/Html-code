@@ -5,6 +5,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.youtube-logo-img {
+  height: 1.55rem;
+  width: auto;
+  display: block;
+}
+
 .header-block {
   background-color: #0f0f0f;
   border-color: #272727 !important;
