@@ -4,40 +4,261 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YouTube Video</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="icon" href="resurs/Youtube_icon.png" />
+    <link rel="icon" type="image/png" href="resurs/Youtube_icon.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <header class="header-block border-bottom">
       <div class="container-fluid py-2">
-        <div class="d-flex align-items-center justify-content-between">
-          <a
-            href="Home.html"
-            class="d-flex align-items-center gap-2 text-decoration-none"
+        <div
+          class="d-flex align-items-center justify-content-between gap-3 flex-wrap"
+        >
+          <div class="d-flex align-items-center gap-3">
+            <button class="btn menu-btn">☰</button>
+
+            <a
+              href="Home.html"
+              class="d-flex align-items-center gap-2 text-decoration-none logo-link"
+            >
+              <img
+                src="resurs/Youtube_logo.png"
+                alt="logo"
+                class="youtube-logo-img"
+              />
+              <span class="fw-bold fs-4 logo-text">YouTube</span>
+            </a>
+          </div>
+
+          <form
+            class="search-form d-flex align-items-center justify-content-center flex-grow-1"
+            action="Video5.html"
           >
-            <img src="resurs/Youtube_logo.png" class="youtube-logo-img" />
-            <span class="logo-text">YouTube</span>
-          </a>
+            <div class="input-group search-group">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Введите запрос"
+              />
+              <button class="btn search-btn" type="submit">🔍</button>
+            </div>
+          </form>
+
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn icon-btn">🎤</button>
+            <button class="btn icon-btn">＋</button>
+            <button class="btn icon-btn">🔔</button>
+            <a href="Profile.html" class="profile-circle text-decoration-none"
+              >H</a
+            >
+          </div>
         </div>
       </div>
     </header>
 
-    <div class="container mt-4">
-      <iframe
-        class="main-video-frame"
-        src="https://www.youtube.com/embed/52eVyv_6OlQ"
-        allowfullscreen
-      ></iframe>
+    <div class="container-fluid py-3">
+      <div class="row g-4">
+        <main class="col-12 col-xl-8">
+          <div class="video-player-block rounded-4 overflow-hidden mb-3">
+            <iframe
+              class="main-video-frame"
+              src="https://www.youtube.com/embed/52eVyv_6OlQ"
+              title="YouTube video player"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
 
-      <h4 class="mt-3">СМЕРТЬ ОТ ГЛАМУРА ПЕСНЯ | МЕТТАТОН ЭКС НА РУССКОМ</h4>
+          <div class="main-video-title mb-3">
+            СМЕРТЬ ОТ ГЛАМУРА ПЕСНЯ | МЕТТАТОН ЭКС НА РУССКОМ | Меттатон музыка
+          </div>
 
-      <p>1 561 482 просмотра • 8 июл. 2022 г.</p>
+          <div
+            class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center gap-3 mb-3"
+          >
+            <div class="d-flex align-items-center gap-3">
+              <div class="channel-avatar-big bg-secondary">F</div>
+
+              <div>
+                <div class="video-page-channel-name">FolkStudio</div>
+                <div class="video-page-channel-meta">30,5 тыс. подписчиков</div>
+              </div>
+
+              <button class="btn video-subscribe-btn">Подписаться</button>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn video-action-btn">👍 16 тыс.</button>
+              <button class="btn video-action-btn">👎</button>
+              <button class="btn video-action-btn">↗ Поделиться</button>
+              <button class="btn video-action-btn">⬇ Скачать</button>
+            </div>
+          </div>
+
+          <div class="video-description-block rounded-4 p-3 mb-4">
+            <div class="description-top mb-2">
+              1 561 482 просмотра • 8 июл. 2022 г.
+            </div>
+            <div class="description-text">
+              Песня по мотивам Undertale на русском языке. Один из самых известных треков канала.
+            </div>
+          </div>
+
+          <div class="comments-title mb-3">Комментарии 3</div>
+
+          <div class="comment-block d-flex gap-3 mb-4">
+            <div class="comment-avatar bg-primary">A</div>
+            <div>
+              <div class="comment-name mb-1">ArtemPlay</div>
+              <div class="comment-text">
+                Очень атмосферное видео, особенно момент с маньяком в конце.
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-block d-flex gap-3 mb-4">
+            <div class="comment-avatar bg-success">M</div>
+            <div>
+              <div class="comment-name mb-1">MaxPro</div>
+              <div class="comment-text">
+                Отличное видео, посмотрел с удовольствием.
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-block d-flex gap-3">
+            <div class="comment-avatar bg-warning text-dark">S</div>
+            <div>
+              <div class="comment-name mb-1">Sheri</div>
+              <div class="comment-text">
+                Жду ещё подобные ролики, получилось очень круто.
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <aside class="col-12 col-xl-4">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <button class="btn category-btn active-category">Все</button>
+            <button class="btn category-btn">Игры</button>
+            <button class="btn category-btn">Хорроры</button>
+            <button class="btn category-btn">Музыка</button>
+          </div>
+
+          <a
+            href="Video1.html"
+            class="text-decoration-none recommended-link d-flex gap-3 mb-3"
+          >
+            <div class="recommended-thumb-wrap">
+              <img
+                src="https://img.youtube.com/vi/2j0fJ63rJdA/hqdefault.jpg"
+                alt="thumb"
+                class="recommended-thumb"
+              />
+              <div class="recommended-time">16:31</div>
+            </div>
+
+            <div>
+              <div class="recommended-title">
+                МАНЬЯК СТАЛ СЛИШКОМ УМНЫЙ!!! (ВЫЖИВАЕМ В FRIDAY THE 13)
+              </div>
+              <div class="recommended-channel">Quantum Games</div>
+              <div class="recommended-meta">73 тыс. просмотров</div>
+            </div>
+          </a>
+
+          <a
+            href="Video2.html"
+            class="text-decoration-none recommended-link d-flex gap-3 mb-3"
+          >
+            <div class="recommended-thumb-wrap">
+              <img
+                src="https://img.youtube.com/vi/Qmfe1TGa_WY/hqdefault.jpg"
+                alt="thumb"
+                class="recommended-thumb"
+              />
+              <div class="recommended-time">9:13</div>
+            </div>
+
+            <div>
+              <div class="recommended-title">
+                СЕКБИ про ПРИГЛАШЕНИЕ ЛОЛОЛОШКИ на МАЙНШИЛД | Нарезки МайнШилд 4
+              </div>
+              <div class="recommended-channel">Артодэй - Нарезки</div>
+              <div class="recommended-meta">25 тыс. просмотров</div>
+            </div>
+          </a>
+
+          <a
+            href="Video3.html"
+            class="text-decoration-none recommended-link d-flex gap-3 mb-3"
+          >
+            <div class="recommended-thumb-wrap">
+              <img
+                src="https://img.youtube.com/vi/g5pK7kNCXFU/hqdefault.jpg"
+                alt="thumb"
+                class="recommended-thumb"
+              />
+              <div class="recommended-time">3:58</div>
+            </div>
+
+            <div>
+              <div class="recommended-title">
+                «THE OTHER WAY» | UNDERTALE VERSION | feat: @sirus-ip2xl
+              </div>
+              <div class="recommended-channel">*ЧайОкСМятой*</div>
+              <div class="recommended-meta">121 тыс. просмотров</div>
+            </div>
+          </a>
+
+          <a
+            href="Video4.html"
+            class="text-decoration-none recommended-link d-flex gap-3 mb-3"
+          >
+            <div class="recommended-thumb-wrap">
+              <img
+                src="https://img.youtube.com/vi/LAz8VGOJYWw/hqdefault.jpg"
+                alt="thumb"
+                class="recommended-thumb"
+              />
+              <div class="recommended-time">4:48</div>
+            </div>
+
+            <div>
+              <div class="recommended-title">
+                Head To Head With Lyrics (Animation Collab With @limitless6473)
+              </div>
+              <div class="recommended-channel">after stick node</div>
+              <div class="recommended-meta">193 тыс. просмотров</div>
+            </div>
+          </a>
+
+          <a
+            href="Video6.html"
+            class="text-decoration-none recommended-link d-flex gap-3 mb-3"
+          >
+            <div class="recommended-thumb-wrap">
+              <img
+                src="https://img.youtube.com/vi/4wvi-mN46Jw/hqdefault.jpg"
+                alt="thumb"
+                class="recommended-thumb"
+              />
+              <div class="recommended-time">19:32</div>
+            </div>
+
+            <div>
+              <div class="recommended-title">
+                Пронёс на Рейс Ржаки ✈️
+              </div>
+              <div class="recommended-channel">1337LikeR</div>
+              <div class="recommended-meta">685 тыс. просмотров</div>
+            </div>
+          </a>
+        </aside>
+      </div>
     </div>
   </body>
 </html>
