@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tailwind CSS</title>
+  </head>
+  <body>
+    <h1 class="text-3xl underline font-bold">hello, Tailwind CSS!</h1>
+
+    <div class="bg-sky-900 py-8">
+      <div
+        class="flex flex-col items-center w-3/5 min-w-max mx-auto bg-sky-400 rounded-lg
+        dark:bg-mist-900
+        sm:flex-row"
+      >
+        <img class="rounded-full h-4/5" src="account.png" alt="avatar" />
+        <div class="space-y-2 text-center sm:text-left">
+          <div class="space-y-0.5">
+            <p class="text-lg font-bold dark:text-mauve-300">Erin Lindford</p>
+            <p class="font-medium text-gray-500">Product Engineer</p>
+          </div>
+          <button
+            class=" border border-purple-500 px-4 py-1 rounded-3xl
+             font-semibold text-purple-700 hover:border-transparent hover:bg-purple-500 hover:text-white
+             dark:text-violet-400 dark:hover:bg-violet-500 dark:hover:bg-violet-900"
+          >
+            Message
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
