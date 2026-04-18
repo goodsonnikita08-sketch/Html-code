@@ -20,18 +20,6 @@ body {
   color: #ffffff;
 }
 
-.youtube-icon {
-  width: 2.5rem;
-  height: 2rem;
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 0.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
 .logo-text {
   color: #ffffff;
 }
