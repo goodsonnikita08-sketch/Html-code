@@ -8,7 +8,6 @@ body {
 .youtube-logo-img {
   height: 1.55rem;
   width: auto;
-  display: block;
 }
 
 .header-block {
@@ -17,10 +16,6 @@ body {
 }
 
 .logo-link {
-  color: #ffffff;
-}
-
-.logo-text {
   color: #ffffff;
 }
 
@@ -35,10 +30,6 @@ body {
 .icon-btn:hover {
   background-color: #272727;
   color: #ffffff;
-}
-
-.search-form {
-  min-width: 18rem;
 }
 
 .search-group {
@@ -112,10 +103,6 @@ body {
   font-weight: bold;
 }
 
-.main-block {
-  background-color: #0f0f0f;
-}
-
 .category-btn {
   background-color: #272727;
   color: #ffffff;
@@ -137,14 +124,6 @@ body {
 .active-category:hover {
   background-color: #ffffff;
   color: #0f0f0f;
-}
-
-.video-link {
-  color: #ffffff;
-}
-
-.video-card {
-  width: 100%;
 }
 
 .thumb-wrap {
@@ -227,12 +206,6 @@ body {
     height: 12rem;
   }
 }
-.channel-banner {
-  width: 100%;
-  height: 12rem;
-  background: linear-gradient(90deg, #321111 0%, #7a1111 50%, #121212 100%);
-}
-
 .profile-real-avatar {
   width: 10rem;
   height: 10rem;
@@ -287,21 +260,6 @@ body {
 .channel-action-btn:hover {
   background-color: #3a3a3a;
   color: #ffffff;
-}
-
-.profile-tab {
-  color: #aaaaaa;
-  padding-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.profile-tab:hover {
-  color: #ffffff;
-}
-
-.active-profile-tab {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
 }
 
 .section-title {
