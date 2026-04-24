@@ -300,9 +300,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .channel-banner {
-    height: 8rem;
-  }
+  
   .profile-real-avatar {
     width: 7rem;
     height: 7rem;
@@ -472,22 +470,7 @@ body {
   font-size: 0.9rem;
 }
 
-@media (max-width: 1399px) {
-  .main-video-frame {
-    height: 34rem;
-  }
-}
-
-@media (max-width: 991px) {
-  .main-video-frame {
-    height: 26rem;
-  }
-}
-
 @media (max-width: 767px) {
-  .main-video-frame {
-    height: 15rem;
-  }
 
   .main-video-title {
     font-size: 1.2rem;
